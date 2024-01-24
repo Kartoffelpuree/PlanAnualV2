@@ -23,6 +23,9 @@ import VuiTypography from "components/VuiTypography";
 import VuiAvatar from "components/VuiAvatar";
 import VuiBadge from "components/VuiBadge";
 
+//Components of employees
+import EditDeleteButtons from "../components/EditDeleteButtons";
+
 // Images
 import avatar1 from "assets/images/avatar1.png";
 import avatar2 from "assets/images/avatar2.png";
@@ -96,9 +99,7 @@ export default {
         </VuiTypography>
       ),
       acción: (
-        <VuiTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-          Editar
-        </VuiTypography>
+        <EditDeleteButtons/>
       ),
     },
     {
@@ -124,9 +125,7 @@ export default {
         </VuiTypography>
       ),
       acción: (
-        <VuiTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-          Editar
-        </VuiTypography>
+        <EditDeleteButtons/>
       ),
     },
     {
@@ -153,9 +152,7 @@ export default {
         </VuiTypography>
       ),
       acción: (
-        <VuiTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-          Editar
-        </VuiTypography>
+        <EditDeleteButtons/>
       ),
     },
     {
@@ -182,9 +179,7 @@ export default {
         </VuiTypography>
       ),
       acción: (
-        <VuiTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-          Editar
-        </VuiTypography>
+        <EditDeleteButtons/>
       ),
     },
     {
@@ -210,9 +205,7 @@ export default {
         </VuiTypography>
       ),
       acción: (
-        <VuiTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-          Editar
-        </VuiTypography>
+        <EditDeleteButtons/>
       ),
     },
     {
@@ -238,9 +231,7 @@ export default {
         </VuiTypography>
       ),
       acción: (
-        <VuiTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-          Editar
-        </VuiTypography>
+        <EditDeleteButtons/>
       ),
     },
   ],

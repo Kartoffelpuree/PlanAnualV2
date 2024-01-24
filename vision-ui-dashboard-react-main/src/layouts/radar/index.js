@@ -97,45 +97,47 @@ const RadarChart = () => {
     return (
         <DashboardLayout>
             <DashboardNavbar />
-            <Card
-                sx={({ breakpoints }) => ({
-                    [breakpoints.up('xxl')]: {
-                    },
-                    display: 'block',
-                })}>
-                <Grid
-                    container
+            <VuiBox py={3}>
+                <Card
                     sx={({ breakpoints }) => ({
-                        spacing: '24px',
-                        [breakpoints.only('sm')]: {
-                            columnGap: '0px',
-                            rowGap: '24px'
+                        [breakpoints.up('xxl')]: {
                         },
-                        [breakpoints.up('md')]: {
-                            gap: '24px',
-                            ml: '50px !important'
-                        },
-                        [breakpoints.only('xl')]: {
-                            gap: '12px',
-                            mx: 'auto !important'
-                        }
+                        display: 'block',
                     })}>
-                    <Grid item spacing={3}>
-                        <Userphoto />
+                    <Grid
+                        container
+                        sx={({ breakpoints }) => ({
+                            spacing: '24px',
+                            [breakpoints.only('sm')]: {
+                                columnGap: '0px',
+                                rowGap: '24px'
+                            },
+                            [breakpoints.up('md')]: {
+                                gap: '24px',
+                                ml: '50px !important'
+                            },
+                            [breakpoints.only('xl')]: {
+                                gap: '12px',
+                                mx: 'auto !important'
+                            }
+                        })}>
+                        <Grid item spacing={3}>
+                            <Userphoto />
+                        </Grid>
+                        <Grid item xs={12} md={5.5} xl={5.8} xxl={5.5}>
+                            <ProfileInfoCard
+                                title="profile information"
+                                info={{
+                                    'nombre/name': "Hernandez Cruz Carlos Cesar",
+                                    'área/area': "Production",
+                                    'depto/depto': "Production",
+                                    'puesto/Job position': "Supervisor",
+                                }}
+                            />
+                        </Grid>
                     </Grid>
-                    <Grid item xs={12} md={5.5} xl={5.8} xxl={5.5}>
-                        <ProfileInfoCard
-                            title="profile information"
-                            info={{
-                                'nombre/name': "Hernandez Cruz Carlos Cesar",
-                                'área/area': "Production",
-                                'depto/depto': "Production",
-                                'puesto/Job position': "Supervisor",
-                            }}
-                        />
-                    </Grid>
-                </Grid>
-            </Card>
+                </Card>
+            </VuiBox>
             <VuiBox mt={3} mb={3}>
                 <Card
                     sx={({ breakpoints }) => ({
