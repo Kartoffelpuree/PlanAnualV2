@@ -53,7 +53,7 @@ const RadarChart = () => {
                 colors: ["#2d8cfc", "#0f4a91"],
                 dashArray: 0,
             },
-            legend: {
+            legend: { 
                 show: false,
             },
             dataLabels: {
