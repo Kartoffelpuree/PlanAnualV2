@@ -42,6 +42,7 @@ export default {
 
   white: {
     main: "#ffffff",
+    main2: "#0f1535",
     focus: "#ffffff",
   },
 

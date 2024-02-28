@@ -48,6 +48,7 @@ import Profile from "layouts/profile";
 import SignIn from "layouts/authentication/sign-in";
 import SignUp from "layouts/authentication/sign-up";
 import Radar from "layouts/radar"; // Añadido recientemente RADAR
+import Capacitacion from "layouts/capacitaciones/info";
 
 // Vision UI Dashboard React icons
 import { IoRocketSharp } from "react-icons/io5";
@@ -85,7 +86,7 @@ const routes = [
     key: "ilu",
     route: "/ilu",
     icon: <IoStatsChart size="15px" color="inherit" />,
-    component: Tables,
+    component: Capacitacion,
     noCollapse: true,
   },
   {type: "title", title: "OJT", key: "ojt-pages"},

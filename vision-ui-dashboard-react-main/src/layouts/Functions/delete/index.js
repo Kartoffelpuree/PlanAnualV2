@@ -1,18 +1,21 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
-import VuiAlert from 'components/VuiAlert';
 import Icon from '@mui/material/Icon';
+
+//Vui elements
+import VuiBox from 'components/VuiBox';
+import VuiAlert from 'components/VuiAlert';
 import VuiButton from 'components/VuiButton';
 
-const DeleteEmployee = ({ onClose }) => { // Modificamos la prop para recibir la función onClose
+const DeleteEmployee = ({ onClose }) => {
   const handleClose = () => {
-    onClose(); // Llama a la función onClose para cerrar el modal
+    onClose();
   };
 
   return (
     <Modal
-      open={true} // Utiliza una prop para determinar si el modal está abierto
+      open={true}
       aria-labelledby="simple-modal-title"
       aria-describedby="simple-modal-description"
     >
@@ -26,15 +29,25 @@ const DeleteEmployee = ({ onClose }) => { // Modificamos la prop para recibir la
         borderRadius: '8px',
         boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
       }}>
-        <Button onClick={handleClose} color="inherit">
-          <Icon fontSize="small">close</Icon>
-        </Button>
         <VuiAlert color="dark">
-          <Icon fontSize="small">delete</Icon>&nbsp;
-          Eliminar empleado? 
-          <VuiButton variant="outlined" color="error" style={{margin: '8px'}}>
-            Eliminar
-          </VuiButton>
+          <VuiBox>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <div style={{ margin: '0px', width: '100%', color: 'white', textAlign: 'center' }}>
+                <Icon fontSize="small">delete</Icon>&nbsp;
+                Eliminar empleado?
+              </div>
+              <div style={{ position: 'absolute', top: '-5px', right: '-15px' }}>
+                <Button onClick={handleClose} color="inherit">
+                  <Icon fontSize="small">close</Icon>
+                </Button>
+              </div>
+              <div style={{ margin: '0px', width: '100%', textAlign: 'center' }}>
+                <VuiButton variant="outlined" color="error" style={{ margin: '8px' }}>
+                  Eliminar
+                </VuiButton>
+              </div>
+            </div>
+          </VuiBox>
         </VuiAlert>
       </div>
     </Modal>

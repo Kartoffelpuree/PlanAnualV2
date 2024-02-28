@@ -15,70 +15,27 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 import ProfileInfoCard from "examples/Cards/InfoCards/ProfileInfoCard";
 import Userphoto from "layouts/profile/components/Userphoto";
-import employeesTableData from '../data/employeesTableData';
+import capacitacionTableData from '../data/capacitacionTableData';
 import Table from "examples/Tables/Table";
 
-
-
-const InfoEmployee = () => {
+const InfoCapacitaciones = () => {
     // Datos de ejemplo para la gráfica radar
     const { gradients, info } = colors;
     const { cardContent } = gradients;
-    const { columns, rows } = employeesTableData;
+    const { columns, rows } = capacitacionTableData;
 
     return (
         <DashboardLayout>
             <DashboardNavbar />
             <VuiBox py={3}>
-                <Card
-                    sx={({ breakpoints }) => ({
-                        [breakpoints.up('xxl')]: {
-                        },
-                        display: 'block',
-                    })}>
-                    <Grid
-                        container
-                        sx={({ breakpoints }) => ({
-                            spacing: '24px',
-                            [breakpoints.only('sm')]: {
-                                columnGap: '0px',
-                                rowGap: '24px'
-                            },
-                            [breakpoints.up('md')]: {
-                                gap: '24px',
-                                ml: '50px !important'
-                            },
-                            [breakpoints.only('xl')]: {
-                                gap: '12px',
-                                mx: 'auto !important'
-                            }
-                        })}>
-                        <Grid item spacing={3}>
-                            <Userphoto />
-                        </Grid>
-                        <Grid item xs={12} md={5.5} xl={5.8} xxl={5.5}>
-                            <ProfileInfoCard
-                                title="profile information"
-                                info={{
-                                    'nombre/name': "Hernandez Cruz Carlos Cesar",
-                                    'área/area': "Production",
-                                    'depto/depto': "Production",
-                                    'puesto/Job position': "Supervisor",
-                                }}
-                            />
-                        </Grid>
-                    </Grid>
-                </Card>
-            </VuiBox>
-            <VuiBox py={3}>
                 <VuiBox mb={3}>
                     <Card>
                         <VuiBox display="flex" justifyContent="space-between" alignItems="center" mb="22px">
                             <VuiTypography variant="lg" color="white">
-                                Empleados
+                                Capacitaciones
                             </VuiTypography>
                             <VuiButton variant="contained" color="info">
-                                ADD NEW EMPLOYEE
+                                ADD NEW
                             </VuiButton>
                         </VuiBox>
                         <VuiBox
@@ -105,4 +62,4 @@ const InfoEmployee = () => {
     );
 };
 
-export default InfoEmployee;
+export default InfoCapacitaciones;

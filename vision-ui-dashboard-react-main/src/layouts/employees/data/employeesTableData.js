@@ -25,6 +25,8 @@ import VuiBadge from "components/VuiBadge";
 
 //Components of employees
 import EditDeleteButtons from "../components/EditDeleteButtons";
+import Userphoto from "layouts/profile/components/Userphoto";
+
 
 // Images
 import avatar1 from "assets/images/avatar1.png";
@@ -36,6 +38,7 @@ import avatar6 from "assets/images/avatar6.png";
 
 function Employee({ image, name, email }) {
   return (
+
     <VuiBox display="flex" alignItems="center" px={1} py={0.5}>
       <VuiBox mr={2}>
         <VuiAvatar src={image} alt={name} size="sm" variant="rounded" />

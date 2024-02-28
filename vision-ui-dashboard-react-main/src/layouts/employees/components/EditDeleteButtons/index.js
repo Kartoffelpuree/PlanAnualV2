@@ -5,7 +5,7 @@ import DeleteEmployee from 'layouts/Functions/delete'; // Corregí el nombre del
 
 // @mui material components
 import Icon from '@mui/material/Icon';
-import EditEmployee from 'layouts/Functions/edit';
+import EditEmployee from 'layouts/Functions/editEmployee';
 
 function EditDeleteButtons() {
   const [showDeleteEmployee, setShowDeleteEmployee] = useState(false);
