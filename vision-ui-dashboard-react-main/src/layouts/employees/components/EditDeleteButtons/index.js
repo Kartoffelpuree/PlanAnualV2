@@ -5,15 +5,25 @@ import DeleteEmployee from 'layouts/Functions/delete'; // Corregí el nombre del
 
 // @mui material components
 import Icon from '@mui/material/Icon';
+import EditEmployee from 'layouts/Functions/edit';
 
 function EditDeleteButtons() {
-  const [openDeleteModal, setOpenDeleteModal] = useState(false);
+  const [showDeleteEmployee, setShowDeleteEmployee] = useState(false);
+  const [showEditEmployee, setShowEditEmployee] = useState(false);
+  
+  const handleEditEmployeeClick = () => {
+    setShowEditEmployee(true);
+  }
 
-  const handleOpenDeleteModal = () => {
+  const handleCloseEditModal = () => {
+    setShowEditEmployee(false);
+  }
+
+  const handleDeleteEmployeeClick = () => {
     setShowDeleteEmployee(true);
   };
 
-  const handleCloseDeleteModal = () => {
+  const handleCloseModal = () => {
     setShowDeleteEmployee(false); // Actualizamos el estado aquí para que se pueda abrir nuevamente el modal
   };
 
@@ -30,15 +40,15 @@ function EditDeleteButtons() {
       })}
     >
       <VuiBox mr={1}>
-        <VuiButton variant="text" color="error" onClick={handleOpenDeleteModal}>
-        <DeleteEmployee open={openDeleteModal} onClose={handleCloseDeleteModal} />
+        <VuiButton variant="text" color="error" onClick={handleDeleteEmployeeClick}>
           <Icon sx={{ mr: '4px' }}>delete</Icon>&nbsp;DELETE
         </VuiButton>
       </VuiBox>
-      <VuiButton variant="text" color="text">
+      <VuiButton variant="text" color="text" onClick={handleEditEmployeeClick}>
         <Icon sx={{ mr: '4px' }}>edit</Icon>&nbsp;EDIT
       </VuiButton>
-
+      {showEditEmployee && <EditEmployee onClose={handleCloseEditModal} />}
+      {showDeleteEmployee && <DeleteEmployee onClose={handleCloseModal} />}
     </VuiBox>
   );
 }
