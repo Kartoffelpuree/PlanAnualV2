@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Chart from 'react-apexcharts';
 
 import { Card, Stack, Grid } from '@mui/material';
@@ -17,7 +17,7 @@ import ProfileInfoCard from "examples/Cards/InfoCards/ProfileInfoCard";
 import Userphoto from "layouts/profile/components/Userphoto";
 import employeesTableData from '../data/employeesTableData';
 import Table from "examples/Tables/Table";
-
+import NewEmployee from 'layouts/Functions/newEmployee';
 
 
 const InfoEmployee = () => {
@@ -25,6 +25,15 @@ const InfoEmployee = () => {
     const { gradients, info } = colors;
     const { cardContent } = gradients;
     const { columns, rows } = employeesTableData;
+    const [showNewEmployee, setShowNewEmployee] = useState(false);
+
+    const handleNewEmployeeClick = () => {
+        setShowNewEmployee(true);
+      }
+    
+      const handleCloseNewModal = () => {
+        setShowNewEmployee(false);
+      }
 
     return (
         <DashboardLayout>
@@ -58,12 +67,12 @@ const InfoEmployee = () => {
                         </Grid>
                         <Grid item xs={12} md={5.5} xl={5.8} xxl={5.5}>
                             <ProfileInfoCard
-                                title="profile information"
+                                title="Información empleado"
                                 info={{
-                                    'nombre/name': "Hernandez Cruz Carlos Cesar",
-                                    'área/area': "Production",
-                                    'depto/depto': "Production",
-                                    'puesto/Job position': "Supervisor",
+                                    'nombre/name': "Francisco Joel Aguila Delgado",
+                                    'área/area': "Control de Producción",
+                                    'depto/depto': "Control de Producción",
+                                    'puesto/Job position': "Staff",
                                 }}
                             />
                         </Grid>
@@ -77,9 +86,10 @@ const InfoEmployee = () => {
                             <VuiTypography variant="lg" color="white">
                                 Empleados
                             </VuiTypography>
-                            <VuiButton variant="contained" color="info">
-                                ADD NEW EMPLOYEE
+                            <VuiButton variant="contained" color="info" onClick={handleNewEmployeeClick}>
+                                NUEVO EMPLEADO
                             </VuiButton>
+                            {showNewEmployee && <NewEmployee onClose={handleCloseNewModal} />}
                         </VuiBox>
                         <VuiBox
                             sx={{

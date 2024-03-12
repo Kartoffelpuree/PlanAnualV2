@@ -41,11 +41,11 @@ function EditDeleteButtons() {
     >
       <VuiBox mr={1}>
         <VuiButton variant="text" color="error" onClick={handleDeleteEmployeeClick}>
-          <Icon sx={{ mr: '4px' }}>delete</Icon>&nbsp;DELETE
+          <Icon sx={{ mr: '4px' }}>delete</Icon>&nbsp;BORRAR
         </VuiButton>
       </VuiBox>
       <VuiButton variant="text" color="text" onClick={handleEditEmployeeClick}>
-        <Icon sx={{ mr: '4px' }}>edit</Icon>&nbsp;EDIT
+        <Icon sx={{ mr: '4px' }}>edit</Icon>&nbsp;EDITAR
       </VuiButton>
       {showEditEmployee && <EditEmployee onClose={handleCloseEditModal} />}
       {showDeleteEmployee && <DeleteEmployee onClose={handleCloseModal} />}

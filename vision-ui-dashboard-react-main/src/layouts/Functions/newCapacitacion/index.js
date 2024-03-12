@@ -9,7 +9,7 @@ import Icon from '@mui/material/Icon';
 import VuiButton from 'components/VuiButton';
 import VuiBox from 'components/VuiBox';
 
-const EditEmployee = ({ onClose }) => { // Modificamos la prop para recibir la función onClose
+const newCapacitacion = ({ onClose }) => { // Modificamos la prop para recibir la función onClose
     const handleClose = () => {
         onClose(); // Llama a la función onClose para cerrar el modal
     };
@@ -38,11 +38,11 @@ const EditEmployee = ({ onClose }) => { // Modificamos la prop para recibir la f
                         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
                             <div style={{ margin: '8px', width: '30%', color: 'white' }}>
                                 <Icon fontSize="small">delete</Icon>&nbsp;
-                                Editar Capacitación
+                                Nueva Capacitación
                             </div>
                             <div style={{ margin: '0px', width: '55%', textAlign: 'right' }}>
                                 <VuiButton variant="outlined" color="success" style={{ margin: '8px' }}>
-                                    Actualizar
+                                    Añadir
                                 </VuiButton>
                             </div>
                             <div style={{ position: 'absolute', top: '-5px', right: '-15px' }}>
@@ -97,4 +97,4 @@ const EditEmployee = ({ onClose }) => { // Modificamos la prop para recibir la f
     );
 };
 
-export default EditEmployee;
+export default newCapacitacion;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import VuiBox from 'components/VuiBox';
 import VuiButton from 'components/VuiButton';
-import DeleteCapacitacion from 'layouts/Functions/deleteCapacitacion'; // Corregí el nombre del archivo
+import DeleteCapacitacion from 'layouts/Functions/delete'; // Corregí el nombre del archivo
 
 // @mui material components
 import Icon from '@mui/material/Icon';

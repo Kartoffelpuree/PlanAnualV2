@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import Chart from 'react-apexcharts';
 
 import { Card, Stack, Grid } from '@mui/material';
@@ -17,9 +18,20 @@ import ProfileInfoCard from "examples/Cards/InfoCards/ProfileInfoCard";
 import Userphoto from "layouts/profile/components/Userphoto";
 import capacitacionTableData from '../data/capacitacionTableData';
 import Table from "examples/Tables/Table";
+import NewCapacitacion from 'layouts/Functions/newCapacitacion';
 
 const InfoCapacitaciones = () => {
-    // Datos de ejemplo para la gráfica radar
+
+    const [showNewCapacitacion, setShowNewCapacitacion] = useState(false);
+
+    const handleNewCapacitacion = () => {
+        setShowNewCapacitacion(true);
+      }
+    
+      const handleCloseNewCapacitacion = () => {
+        setShowNewCapacitacion(false);
+      }
+
     const { gradients, info } = colors;
     const { cardContent } = gradients;
     const { columns, rows } = capacitacionTableData;
@@ -34,9 +46,10 @@ const InfoCapacitaciones = () => {
                             <VuiTypography variant="lg" color="white">
                                 Capacitaciones
                             </VuiTypography>
-                            <VuiButton variant="contained" color="info">
-                                ADD NEW
+                            <VuiButton variant="contained" color="info" onClick={handleNewCapacitacion}>
+                                NUEVA CAPACITACIÓN
                             </VuiButton>
+                            {showNewCapacitacion && <NewCapacitacion onClose={handleCloseNewCapacitacion} />}
                         </VuiBox>
                         <VuiBox
                             sx={{

@@ -259,7 +259,7 @@ export const lineChartOptionsProfile1 = {
     borderColor: "#56577A",
   },
   fill: {
-    type: "gradient",
+    type: "gradient", 
     gradient: {
       shade: "dark",
       type: "vertical",

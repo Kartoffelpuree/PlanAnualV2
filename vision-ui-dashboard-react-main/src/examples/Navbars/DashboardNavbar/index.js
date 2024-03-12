@@ -152,7 +152,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
           <VuiBox sx={(theme) => navbarRow(theme, { isMini })}>
             <VuiBox pr={1}>
               <VuiInput
-                placeholder="Type here..."
+                placeholder="Escribe aqui..."
                 icon={{ component: "search", direction: "left" }}
                 sx={({ breakpoints }) => ({
                   [breakpoints.down("sm")]: {
@@ -180,7 +180,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
                     fontWeight="medium"
                     color={light ? "white" : "dark"}
                   >
-                    Sign in
+                    Administrador
                   </VuiTypography>
                 </IconButton>
               </Link>
